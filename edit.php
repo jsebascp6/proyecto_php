@@ -21,7 +21,7 @@ if (isset($_POST['update'])) {
 
   $query = "UPDATE task set title = '$title', description = '$description' WHERE id=$id";
   mysqli_query($conn, $query);
-  $_SESSION['message'] = 'Task Updated Successfully';
+  $_SESSION['message'] = 'Tarea actualizada';
   $_SESSION['message_type'] = 'warning';
   header('Location: index.php');
 }
@@ -34,13 +34,13 @@ if (isset($_POST['update'])) {
       <div class="card card-body">
       <form action="edit.php?id=<?php echo $_GET['id']; ?>" method="POST">
         <div class="form-group">
-          <input name="title" type="text" class="form-control" value="<?php echo $title; ?>" placeholder="Update Title">
+          <input name="title" type="text" class="form-control" value="<?php echo $title; ?>" placeholder="Actualizar titulo">
         </div>
         <div class="form-group">
         <textarea name="description" class="form-control" cols="30" rows="10"><?php echo $description;?></textarea>
         </div>
         <button class="btn-success" name="update">
-          Update
+          Actualizar
 </button>
       </form>
       </div>

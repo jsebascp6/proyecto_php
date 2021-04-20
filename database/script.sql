@@ -1,6 +1,6 @@
-CREATE DATABASE php_mysql_crud;
+CREATE DATABASE proyecto_php;
 
-use php_mysql_crud;
+use proyecto_php;
 
 CREATE TABLE task(
   id INT(11) PRIMARY KEY AUTO_INCREMENT,
